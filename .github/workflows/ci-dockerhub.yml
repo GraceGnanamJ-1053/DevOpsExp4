@@ -24,6 +24,10 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
+    - name: Debug files
+      run: |
+        ls -R
+        python -c "import sys; print(sys.path)"
     - name: Run tests
       run: pytest -q
 
